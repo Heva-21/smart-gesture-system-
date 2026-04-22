@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 7%;
+    --foreground: 190 100% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 190 100% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 190 100% 95%;
+
+    --primary: 180 100% 45%;
+    --primary-foreground: 220 25% 7%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 190 100% 90%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 210 15% 55%;
+
+    --accent: 280 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 180 100% 45%;
+
+    --radius: 0.75rem;
+
+    --glow-primary: 0 0 20px hsl(180 100% 45% / 0.3);
+    --glow-accent: 0 0 20px hsl(280 80% 60% / 0.3);
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 190 100% 95%;
+    --sidebar-primary: 180 100% 45%;
+    --sidebar-primary-foreground: 220 25% 7%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 190 100% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 180 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
